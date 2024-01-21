@@ -58,8 +58,8 @@ labels = nx.get_edge_attributes(G, 'weight')
 nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
 
 # Виділити зеленим кольором найдешевший шлях для переказу коштів в офшорний банк
-nx.draw_networkx_nodes(G, pos, nodelist=path, node_color='g')
+nx.draw_networkx_nodes(G, pos, nodelist=path, node_color='orange')
 nx.draw_networkx_edges(G, pos, edgelist=[(
-    path[i], path[i+1]) for i in range(len(path)-1)], edge_color='g', width=1)
+    path[i], path[i+1]) for i in range(len(path)-1)], edge_color='orange', width=1)
 
 plt.show()
